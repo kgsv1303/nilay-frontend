@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #FFFFFF;           /* Your primary color */
+    --foreground: #374955;           /* Your dark text color */
+
+    --card: #7FF9C1;                 /* A lighter color from your theme */
+    --card-foreground: #374955;      /* Dark text color */
+
+    --popover: #5F97B9;              /* Another color from your theme */
+    --popover-foreground: #374955;   /* Dark text color */
+
+    --primary: #00BDFF;
+    --primary-foreground: #9BAEBC;   /* Lighter shade for contrast */
+
+    --secondary: #7FF9C1;            /* Lighter color from your theme */
+    --secondary-foreground: #374955; /* Dark text color */
+
+    --muted: #5F97B9;                /* Color from your theme */
+    --muted-foreground: #9BAEBC;     /* Lighter shade for contrast */
+
+    --accent: #374955;               /* Darker color from your theme */
+    --accent-foreground: #FFFFFF;     /* White for better visibility on darker backgrounds */
+
+    --destructive: #9BAEBC;          /* Neutral color from your theme */
+    --destructive-foreground: #FFFFFF; /* White for better visibility on darker backgrounds */
+
+    --border: #9BAEBC;               /* Neutral color from your theme */
+    --input: #9BAEBC;                /* Neutral color from your theme */
+    --ring: #3.74955;                /* Dark text color */
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='number'],
+input[type='tel'],
+textarea {
+  @apply my-2 w-full rounded-[10px] border py-2 px-3;
+}
+
+textarea {
+  height: 140px;
+}
+
+button {
+  @apply bg-gray-300;
+}
+
+button.primary {
+  @apply w-full rounded-[10px] bg-primary p-2 text-white;
+}
+
+button.social {
+  @apply w-full rounded-[10px] border-[1px] border-black bg-white p-2 font-semibold text-black hover:bg-gray-50;
+}
+
+.card {
+  @apply h-[410px] w-[327px] sm:h-[500px] sm:w-[435px] md:h-[400px] md:w-[350px] lg:h-[400px] lg:w-[330px] xl:h-[350px] xl:w-[300px];
+}
